@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet" type="text/css" >
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-um">
+        <h1>Equipamentos do drofo</h1>
+    <p id="Equipdrofo"></p>
+    </div>
+    <div class="container-dois">
+        <h1>Equipamentos do Toper</h1>
+    <p id="Equiptoper"></p>
+    </div>
+
+    <script>
+        let drofo = ["anel de invisibilidade", "botas mágicas", "botas mágicas", "poção de sono", "poção da inocência", "poção da inocência"];
+        let toper = ["capa da invisibilidade", "pedra do despertar", "varinha das varinhas", "poção da inocências", "poção da mentira", "poção da mentira", "poção anti-inteligência"];
+        // consumiu sua poção da mentira.
+        toper.splice(4, 1);
+        // perdeu sua pedra
+        toper.splice(1, 1);
+        // ganhou um par de botas do drofo.
+        toper.splice(6, 0, drofo[2]);
+        drofo.splice(2,1);
+        //achou um escudo mágico e uma espada mágica.
+        toper.push("escudo mágico","espada mágica");
+        //começo da participação de drofo.
+        //ganhou uma bota mágica.
+        drofo.splice(1, 0, "bota mágica ganhada");
+        //usou sua poção do sono.
+        drofo.splice(3, 1);
+        //consumiu a poção anti-inteligência do Toper.
+        toper.splice(4, 1);
+        //encontrou um ovo de dragão e uma coxinha.
+        drofo.push("ovo de dragão", "coxinha");
+
+        console.log(toper);
+        console.log(drofo);
+
+        document.getElementById("Equipdrofo").innerHTML = drofo;
+        document.getElementById("Equiptoper").innerHTML = toper;
+
+    </script>
+</body>
+</html>
